@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dewell.mapper.OrderInfoMapper">
+	<resultMap type="com.dewell.entity.OrderInfo" id="orderInfo">
+		<id property="orderId" column="order_id"/>
+		<result property="userId" column="user_id"/>
+		<result property="priceId" column="price_id"/>
+		<result property="goodId" column="good_id"/>
+		<result property="goodTitle" column="good_title"/>
+		<result property="goodInfo" column="good_info"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="orderInfo">
+		select * from order_info
+	</select>
+</mapper>
